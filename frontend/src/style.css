@@ -21,8 +21,7 @@ html {
 
 body * {
   font-family: Goyang;
-  background-color: var(--background);
-  color: var(--textColor)
+
 }
 
 *,
