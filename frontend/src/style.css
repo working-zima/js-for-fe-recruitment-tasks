@@ -5,12 +5,24 @@
   font-style: normal;
 }
 
+:root[color-mode="dark"] {
+  --background: #000;
+  --textColor: white;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--textColor)
+}
+
 html {
   box-sizing: border-box;
 }
 
 body * {
   font-family: Goyang;
+  background-color: var(--background);
+  color: var(--textColor)
 }
 
 *,
@@ -84,11 +96,32 @@ body * {
   width: 100%;
 }
 
-/* dark mode 처리
+@media screen and(Max-width: 992px) {
+  .SearchResult {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
+
+@media screen and(Max-width: 768px) {
+  .SearchResult {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+
+  .ImageInfo .content-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and(Max-width: 576px) {
+  .SearchResult {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
+
+/* 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000;
     color: white;
   }
-}
-*?
+} */
